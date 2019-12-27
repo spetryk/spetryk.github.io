@@ -1,22 +1,50 @@
 body {
     margin: 0;
     margin-top: 50px;
+    background-color: rgb(41, 42, 45);
+    color: rgb(169, 169, 179);
+    font-family: Helvetica, Arial, sans-serif;
+    text-rendering: optimizeLegibility;
+    line-height: 1.54;
+    letter-spacing: 0.06em;
 }
+
+
+h1 {
+    font-size: 42px;
+    letter-spacing: 0.1em;
+}
+
+h2 {
+    font-size: 26px;
+    line-height: 1.3;
+    letter-spacing: 0.06em;
+ }
 
 header {
     display: flex;
     position: fixed;
+    margin: 0 auto;
     top: 0;
     left: 0;
     right: 0;
-    height: 50px;
-    line-height: 50px;
-    background-color: #eee;
+    height: 25px;
+/*    line-height: 50px;*/
+    border: 0px;
+    background-color:  #252627;
+    padding: 20px;
+
 }
 
 header * {
     display: inline;
     height: 50px;
+    font-family: roboto, Arial;
+    color: #A9A9B3;
+    text-decoration: none;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: 0.06em;
 }
 
 header ul {
@@ -28,19 +56,93 @@ header li {
     margin-left: 20px;
 }
 
+
 section {
     height: 100vh;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    /*text-align: center;*/
+}
+
+.section-inner {
+    padding: 80px;
+}
+
+.intro-img {
+    width: 300px;
+    height: 300px;
+}
+
+#head {
+    width: 760px;
     text-align: center;
 }
+
 
 footer {
     text-align: center;
     padding: 50px;
 }
 
+.container {
+    display: grid;
+    grid-template-columns: repeat(8, 100px);
+    grid-template-rows: repeat(3, 150px);
+    /*border: 2px solid white;*/
+    place-items: stretch;
+}
+
+.item-1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.item-2 {
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    align-self: center;
+    text-align: left;
+}
+
+.item-3 {
+    grid-column-start: 3;
+    grid-column-end: 7;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    place-self: center;
+    text-align: right;
+}
+
+.item-4 {
+    grid-column-start: 6;
+    grid-column-end: 8;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.arrow-text {
+    font-family: monospace, serif;
+    font-size: 20px;
+    line-height: 5px;
+}
+
+
+.arrow {
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+}
+
+
+table, tr, td {
+    border: 1px solid white;
+    text-align: center;
+}
 
 
