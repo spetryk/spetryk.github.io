@@ -1,69 +1,97 @@
 <!DOCTYPE html>
 <html>
- <head>
-   <title> Suzie Petryk</title>
-   <link rel="stylesheet" href="style.css">
- </head>
- <body>
-   <header>
-     <span id="head">
-       <nav>
-         <ul>
-           <li><a href="#research">Research</a></li>
-           <li><a href="#contact">Contact</a></li>
-         </ul>
-       </nav>
-     </span>
-   </header>
-   <main>
-     <section id="intro">
-       <div class="section-inner">
-         <h1>welcome friend</h1>
-         <h2>I'm suzie petryk</h2>
-         <p>
-           I am a first year Ph.D. student in AI at UC Berkeley, co-advised by <a href="https://people.eecs.berkeley.edu/~jegonzal/">Joseph Gonzalez</a> (in machine learning systems) and by <a href="https://people.eecs.berkeley.edu/~trevor/">Trevor Darrell</a> (in computer vision). I'm fortunate to be part of the <a href="https://rise.cs.berkeley.edu/">RISE lab</a> as well as <a href="https://bair.berkeley.edu/">BAIR</a>.
-         </p>
-       </div>
+  <head>
+    <!-- Load the d3 library. -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <title> Suzie Petryk</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <span id="head">
+        <nav>
+          <ul>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </span>
+    </header>
+    <main>
+      <section id="intro">
+        <div class="section-inner">
+          <h1>suzie petryk</h1>
+          <p>
+            Hello! I am a Ph.D. student in AI at UC Berkeley, co-advised by <a href="https://people.eecs.berkeley.edu/~jegonzal/">Joseph Gonzalez</a> (in machine learning systems) and by <a href="https://people.eecs.berkeley.edu/~trevor/">Trevor Darrell</a> (in computer vision). I'm fortunate to be part of the <a href="https://rise.cs.berkeley.edu/">RISE lab</a> (Real-Time Intelligent Secure Explainable Systems) as well as <a href="https://bair.berkeley.edu/">BAIR</a> (Berkeley Artificial Intelligence Research). Before coming to Berkeley, I obtained my B.S. in computer science at Cornell University.
+          </p>
+          <p>
+            My research interests are currently in explainability for convolutional neural networks, and using those understandings to inform model architecture and training. I am also interested in making neural architecture search more accessible to a wider audience.
+          </p>
+        </div>
 
-       <div class="container">
-         <div class="grid item-1">
-           <img src="resources/spetryk.svg" class="intro-img">
-         </div>
-         <div class="grid item-2 arrow-text">
-           <p>This is me</p>
-           <p class="arrow">&larr;</p>
-         </div>
-         <div class="grid item-3 arrow-text">
-           <p>This is not me</p>
-           <p class="arrow">&rarr;</p>
-         </div>
-         <div class="grid item-4">
-           <img src="resources/moose.svg" class="intro-img">
-         </div>
-       </div>
+        <div class="container">
+          <div class="grid item-1">
+            <img src="resources/spetryk.svg" class="intro-img">
+          </div>
+          <div class="grid item-2 arrow-text">
+            <p>This is me</p>
+            <p class="arrow">&larr;</p>
+          </div>
+          <div class="grid item-3 arrow-text">
+            <p>This is not me</p>
+            <p class="arrow">&rarr;</p>
+          </div>
+          <div class="grid item-4">
+            <img src="resources/moose.svg" class="intro-img">
+          </div>
+        </div>
 
-<!-- Ideas: timeline w/ internships, school, etc.
-     Can include points really close together that are "climbing" (on left hand side, w/
-     small circular climbing picture) then "not climbing" (on right hand side, w/
-     crutches picture) -->
+        <!-- Ideas: timeline w/ internships, school, etc.
+             Can include points really close together that are "climbing" (on left hand side, w/
+             small circular climbing picture) then "not climbing" (on right hand side, w/
+             crutches picture) -->
 
-     </section>
-     <section id="timeline-section">
-       <div class="timeline">
-         <span class="dot"></span>
-         <div class="timeline-left">
-           <div class="content">
-             <h2>2019</h2>
-             <p>Something abt this year</p>
-           </div>
-         </div>
-         <div class="timeline-right">
-           <div class="content">
-             <h2>2019</h2>
-             <p>Something else abt this year</p>
-           </div>
-         </div>
-       </div>
+
+
+      </section>
+      <section id="timeline-section">
+
+        <div id="timeline-svg"></div>
+        <script>
+         var height = 700;
+         var width = 700;
+         var padding = 60;
+
+
+         var svg = d3.select("#timeline-svg").append("svg")
+                     .attr("height", height + 2 * padding).attr("width", width + 2 * padding)
+                     .append("g").attr("transform", "translate(" + padding + "," + padding + ")");
+         svg.attr("stroke", "white").attr("stroke-width", 3);
+         svg.append("rect").attr("height", 20).attr("width", 20).style("fill", "white");
+
+         // Vertical line for timeline
+         svg.append("rect")
+            .attr("height", height).attr("width", 1)
+            .attr("x", width/2).attr("y", 0).style("fill", "white");
+
+        </script>
+
+
+       <!-- <div class="timeline">
+            <span class="dot"></span>
+            <div class="timeline-left">
+            <div class="content">
+            <h2>2019</h2>
+            <p>Something abt this year</p>
+            </div>
+            </div>
+            <div class="timeline-right">
+            <div class="content">
+            <h2>2019</h2>
+            <p>Something else abt this year</p>
+            </div>
+            </div>
+            </div> -->
      </section>
 
      <section id="research">

@@ -1,19 +1,21 @@
 
 
 :root {
+    --color-1: rgb(41, 42, 45);
     --color-2: rgb(169, 169, 179);
 }
 
 body {
     margin: 0 auto;
     margin-top: 50px;
-    background-color: rgb(41, 42, 45);
+    background-color: var(--color-1);
     color: var(--color-2);
     font-family: Helvetica, Arial, sans-serif;
     text-rendering: optimizeLegibility;
     line-height: 1.54;
-    width: 60%;
+    width: 50%;
     letter-spacing: 0.06em;
+
 }
 
 
@@ -92,8 +94,8 @@ section {
 }
 
 .intro-img {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
 }
 
 #head {
@@ -111,9 +113,9 @@ footer {
 /** Grid **/
 .container {
     display: grid;
-    grid-template-columns: repeat(8, 100px);
-    grid-template-rows: repeat(3, 150px);
-    /*border: 2px solid white;*/
+    grid-template-columns: repeat(9, 90px);
+    grid-template-rows: repeat(3, 120px);
+   /* border: 2px solid white;*/
     place-items: stretch;
 }
 
@@ -144,14 +146,15 @@ footer {
 
 .item-4 {
     grid-column-start: 6;
-    grid-column-end: 8;
+    grid-column-end: 9;
     grid-row-start: 2;
     grid-row-end: 3;
+    justify-self: right;
 }
 
 .arrow-text {
     font-family: monospace, serif;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 5px;
 }
 
@@ -188,11 +191,15 @@ footer {
 /*   left: 15px; */
 /* } */
 
+svg {
+    margin: 0 auto;
+    border: 2px solid white;
+}
+
 .dot {
     height: 16px;
     width: 16px;
-    margin-top: -8px;
-    margin-left: -8px;
+    transform: translate(-50%, -50%);
     background-color: var(--color-2);
     border-radius: 50%;
     display: inline-block;
