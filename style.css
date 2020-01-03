@@ -5,6 +5,9 @@
     --color-2: rgb(169, 169, 179);
     --color-3: #CDCDC0;
     --color-4: #626D71;
+    --color-5: #DDBC95;
+    --color-6: #90323D;
+    --color-7: #BA7F86;
 }
 
 body {
@@ -34,14 +37,39 @@ h2 {
     font-family: Helvetica;
  }
 
+h3 {
+    font-size: 20px;
+}
+
+p {
+    font-size: 18px;
+}
+
+
 /**Links in text **/
 a {
-    color: white;
+    color: var(--color-6);
     text-decoration: none;
 }
 
 a:hover {
-    color: green;
+    color: var(--color-7);
+}
+
+
+.pub {
+    font-weight: bold;
+    font-style: italic;
+    color: var(--color-6);
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 /** Header **/
@@ -86,12 +114,14 @@ header li {
 section {
     height: 100vh;
     /*border: 1px solid black;*/
-    display: flex;
-    flex-direction: column;
+    /*display: flex;
+    flex-direction: column;*/
     justify-content: center;
     align-items: center;
+    margin-top: 100px;
     /*text-align: center;*/
 }
+
 
 .section-inner {
     padding: 30px;
@@ -112,10 +142,10 @@ section {
 }
 
 
-footer {
+.footer {
     text-align: center;
     padding: 50px;
-}
+ }
 
 
 /** Grid **/
